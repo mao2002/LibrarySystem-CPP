@@ -202,13 +202,13 @@ void Manager::print_menu()
 	cout << setw(50);
 	cout << "******************" << endl;
 	cout << setw(58);
-	cout << "***欢迎来到长春理工大学图书馆***" << endl;
+	cout << "***欢迎来到xxxx大学图书馆***" << endl;
 	cout << setw(50);
 	cout << "******************" << endl;
 	cout << "    " << setw(10) << "1、图书管理系统"
 		<< "   " << setw(10) << "2、读者管理系统"
 		<< "     "
-		<< "3、查询系统" << setw(10) << "4、借书" << setw(10) << "5、还书" << setw(10) << "6、退出" << endl
+		<< "3、查询系统" << setw(10) << "4、借书" << setw(10) << "5、还书" << setw(17) << "6、退出并保存" << endl
 		<< "选择功能：";
 }
 void Manager::first_menu()
@@ -385,7 +385,7 @@ void Manager::find_reader()
 			return void();
 		}
 	}
-	cout << "在长理没有该读者!!!" << endl;
+	cout << "该校没有该读者!!!" << endl;
 	system("pause");
 }
 void Manager::third()
@@ -454,6 +454,8 @@ void Manager::forth()
 								{
 									book.erase(book.begin() + i);
 								}
+								printf("\n\033[0m\033[1;31m%s\033[0m", "借书成功! (=^▽^=)\n");
+								system("pause");
 								return void();
 							}
 						}
@@ -463,9 +465,13 @@ void Manager::forth()
 						{
 							book.erase(book.begin() + i);
 						}
+						printf("\n\033[0m\033[1;31m%s\033[0m", "借书成功! (=^▽^=)\n");
+						system("pause");
 						return void();
 						break;
 					}
+					printf("\n\033[0m\033[1;31m%s\033[0m", "借书成功! (=^▽^=)\n");
+					system("pause");
 					return void();
 				}
 			}
@@ -474,7 +480,7 @@ void Manager::forth()
 			return void();
 		}
 	}
-	cout << "在长理没有该读者!!!" << endl;
+	cout << "该校没有该读者!!!" << endl;
 	system("pause");
 }
 void Manager::fifth()
@@ -524,6 +530,8 @@ void Manager::fifth()
 								{
 									reader[i].reader_book.erase(reader[i].reader_book.begin() + j);
 								}
+								printf("\n\033[0m\033[1;31m%s\033[0m", "还书成功! (=^▽^=)\n");
+								system("pause");
 								return void();
 							}
 						}
@@ -533,9 +541,13 @@ void Manager::fifth()
 						{
 							reader[i].reader_book.erase(reader[i].reader_book.begin() + j);
 						}
+						printf("\n\033[0m\033[1;31m%s\033[0m", "还书成功! (=^▽^=)\n");
+						system("pause");
 						return void();
 						break;
 					}
+					printf("\n\033[0m\033[1;31m%s\033[0m", "还书成功! (=^▽^=)\n");
+					system("pause");
 					return void();
 				}
 			}
@@ -544,7 +556,7 @@ void Manager::fifth()
 			return void();
 		}
 	}
-	cout << "在长理没有该读者!!!" << endl;
+	cout << "该校没有该读者!!!" << endl;
 	system("pause");
 }
 void Manager::add_book()
@@ -663,7 +675,7 @@ void Manager::delete_reader()
 			return void();
 		}
 	}
-	cout << "在长理没有该读者!!!" << endl;
+	cout << "该校没有该读者!!!" << endl;
 	system("pause");
 }
 void Manager::book_all()
